@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p105570-e988731.adobeaemcloud.com/bin/franklin.delivery/qualifiedigital/aem-boilerplate-xwalk/kburns-universal-editor"
+    url: "https://author-p105570-e988731.adobeaemcloud.com/bin/franklin.delivery/qualifiedigital/aem-boilerplate-xwalk/main"
     type: "markup"
     suffix: ".html"
