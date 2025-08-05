@@ -67,39 +67,6 @@ button {
    BUTTON COMPONENT SYSTEM - AEM Edge Delivery
    ========================================= */
 
-/* Design System Variables */
-:root {
-    --color-primary: #00364b;
-    --color-primary-hover: #004a63;
-    --color-primary-active: #002a3a;
-    --color-secondary: #f8ff84;
-    --color-secondary-hover: #f5fc77;
-    --color-secondary-active: #f2f96a;
-    --color-white: #ffffff;
-    --color-text-primary: #00364b;
-    --color-text-inverse: #ffffff;
-    --color-disabled-bg: #cccccc;
-    --color-disabled-text: #666666;
-    --color-disabled-border: #cccccc;
-
-    --font-family: 'Poppins', sans-serif;
-    --font-weight-semibold: 600;
-    --font-size-base: 16px;
-    --line-height-base: 1.5;
-
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 12px;
-    --space-lg: 24px;
-    --border-radius-xs: 4px;
-    --border-radius-icon: 12.5px;
-
-    --transition-base: all 0.2s ease;
-    --shadow-hover: 0 4px 8px rgba(0, 54, 75, 0.2);
-    --shadow-active: 0 2px 4px rgba(0, 54, 75, 0.2);
-    --shadow-focus: 0 0 0 3px rgba(0, 54, 75, 0.3);
-}
-
 /* =========================================
    BUTTON CONTAINER
    ========================================= */
@@ -119,22 +86,22 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-sm);
-    padding: var(--space-md) var(--space-lg);
+    gap: 8px;
+    padding: 12px 24px;
 
     /* Typography */
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
     text-decoration: none;
     white-space: nowrap;
 
     /* Appearance */
     border: 2px solid transparent;
-    border-radius: var(--border-radius-xs);
+    border-radius: 4px;
     cursor: pointer;
-    transition: var(--transition-base);
+    transition: all 0.2s ease;
 
     /* Sizing */
     box-sizing: border-box;
@@ -150,27 +117,27 @@ button {
    ========================================= */
 
 .button.primary {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-text-inverse);
+    background-color: #00364b;
+    border-color: #00364b;
+    color: #ffffff;
 }
 
 .button.primary:hover {
-    background-color: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+    background-color: #004a63;
+    border-color: #004a63;
     transform: translateY(-1px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
 }
 
 .button.primary:active {
-    background-color: var(--color-primary-active);
-    border-color: var(--color-primary-active);
+    background-color: #002a3a;
+    border-color: #002a3a;
     transform: translateY(0);
-    box-shadow: var(--shadow-active);
+    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
 }
 
 .button.primary:focus {
-    box-shadow: var(--shadow-focus);
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
 }
 
 /* =========================================
@@ -179,28 +146,28 @@ button {
 
 .button.secondary {
     background-color: transparent;
-    border-color: var(--color-primary);
-    color: var(--color-text-primary);
+    border-color: #00364b;
+    color: #00364b;
 }
 
 .button.secondary:hover {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-text-inverse);
+    background-color: #00364b;
+    border-color: #00364b;
+    color: #ffffff;
     transform: translateY(-1px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
 }
 
 .button.secondary:active {
-    background-color: var(--color-primary-active);
-    border-color: var(--color-primary-active);
-    color: var(--color-text-inverse);
+    background-color: #002a3a;
+    border-color: #002a3a;
+    color: #ffffff;
     transform: translateY(0);
-    box-shadow: var(--shadow-active);
+    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
 }
 
 .button.secondary:focus {
-    box-shadow: var(--shadow-focus);
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
 }
 
 /* =========================================
@@ -209,7 +176,7 @@ button {
 
 /* Handle buttons wrapped in <strong> (bold styling) */
 strong .button.primary {
-    font-weight: var(--font-weight-semibold); /* Maintain consistent weight */
+    font-weight: 600; /* Maintain consistent weight */
 }
 
 /* Handle buttons wrapped in <em> (italic styling) */
@@ -221,7 +188,7 @@ em .button.secondary {
 strong em .button,
 em strong .button {
     font-style: normal;
-    font-weight: var(--font-weight-semibold);
+    font-weight: 600;
 }
 
 /* =========================================
@@ -232,40 +199,40 @@ em strong .button {
 .button.tertiary {
     background-color: transparent;
     border-color: transparent;
-    color: var(--color-text-primary);
+    color: #00364b;
 }
 
 .button.tertiary:hover {
     background-color: rgba(0, 54, 75, 0.1);
-    color: var(--color-primary-hover);
+    color: #004a63;
 }
 
 .button.tertiary:active {
     background-color: rgba(0, 54, 75, 0.2);
-    color: var(--color-primary-active);
+    color: #002a3a;
 }
 
 .button.tertiary:focus {
-    box-shadow: var(--shadow-focus);
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
 }
 
 /* Accent Button (Yellow/Secondary Color) */
 .button.accent {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: var(--color-text-primary);
+    background-color: #f8ff84;
+    border-color: #f8ff84;
+    color: #00364b;
 }
 
 .button.accent:hover {
-    background-color: var(--color-secondary-hover);
-    border-color: var(--color-secondary-hover);
+    background-color: #f5fc77;
+    border-color: #f5fc77;
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(248, 255, 132, 0.3);
 }
 
 .button.accent:active {
-    background-color: var(--color-secondary-active);
-    border-color: var(--color-secondary-active);
+    background-color: #f2f96a;
+    border-color: #f2f96a;
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(248, 255, 132, 0.3);
 }
@@ -280,14 +247,14 @@ em strong .button {
 
 /* Small Button */
 .button.small {
-    padding: var(--space-sm) var(--space-md);
+    padding: 8px 12px;
     font-size: 14px;
     min-height: 36px;
 }
 
 /* Large Button */
 .button.large {
-    padding: var(--space-md) 32px;
+    padding: 12px 32px;
     font-size: 18px;
     min-height: 56px;
 }
@@ -299,9 +266,9 @@ em strong .button {
 /* Disabled State */
 .button:disabled,
 .button.disabled {
-    background-color: var(--color-disabled-bg) !important;
-    border-color: var(--color-disabled-border) !important;
-    color: var(--color-disabled-text) !important;
+    background-color: #cccccc !important;
+    border-color: #cccccc !important;
+    color: #666666 !important;
     cursor: not-allowed !important;
     transform: none !important;
     box-shadow: none !important;
@@ -329,19 +296,19 @@ em strong .button {
 }
 
 .button.primary.loading::after {
-    border-top-color: var(--color-white);
+    border-top-color: #ffffff;
 }
 
 .button.secondary.loading::after {
-    border-top-color: var(--color-primary);
+    border-top-color: #00364b;
 }
 
 .button.tertiary.loading::after {
-    border-top-color: var(--color-primary);
+    border-top-color: #00364b;
 }
 
 .button.accent.loading::after {
-    border-top-color: var(--color-primary);
+    border-top-color: #00364b;
 }
 
 @keyframes button-spin {
@@ -360,7 +327,7 @@ em strong .button {
     justify-content: center;
     width: 28px;
     height: 28px;
-    border-radius: var(--border-radius-icon);
+    border-radius: 12.5px;
     flex-shrink: 0;
 }
 
@@ -373,7 +340,7 @@ em strong .button {
 
 /* Icon-only buttons */
 .button.icon-only {
-    padding: var(--space-md);
+    padding: 12px;
     min-width: 48px;
     gap: 0;
 }
@@ -399,18 +366,18 @@ em strong .button {
 
 /* Regular links that are not buttons */
 a:not(.button) {
-    color: var(--color-primary);
+    color: #00364b;
     text-decoration: underline;
-    transition: var(--transition-base);
+    transition: all 0.2s ease;
 }
 
 a:not(.button):hover {
-    color: var(--color-primary-hover);
+    color: #004a63;
     text-decoration: none;
 }
 
 a:not(.button):focus {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid #00364b;
     outline-offset: 2px;
 }
 
@@ -437,7 +404,7 @@ a:not(.button):focus {
     }
 
     .button.small {
-        padding: var(--space-sm) 12px;
+        padding: 8px 12px;
         font-size: 12px;
         min-height: 32px;
     }
@@ -460,20 +427,20 @@ a:not(.button):focus {
    ========================================= */
 
 .default-content-wrapper h1 {
-    font-family: var(--font-family);
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-lg);
+    font-family: 'Poppins', sans-serif;
+    color: #00364b;
+    margin-bottom: 24px;
 }
 
 .default-content-wrapper p {
-    font-family: var(--font-family);
-    line-height: var(--line-height-base);
-    margin-bottom: var(--space-md);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 /* Button containers in content */
 .default-content-wrapper .button-container {
-    margin-bottom: var(--space-md);
+    margin-bottom: 12px;
 }
 
 /* =========================================
@@ -508,6 +475,6 @@ a:not(.button):focus {
 
 /* Focus visible for better keyboard navigation */
 .button:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid #00364b;
     outline-offset: 2px;
 }
