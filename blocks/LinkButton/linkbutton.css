@@ -64,7 +64,7 @@ button {
 /* End Default Styles */
 
 /* =========================================
-   BUTTON COMPONENT SYSTEM
+   BUTTON COMPONENT SYSTEM - AEM Edge Delivery
    ========================================= */
 
 /* Design System Variables */
@@ -100,8 +100,21 @@ button {
     --shadow-focus: 0 0 0 3px rgba(0, 54, 75, 0.3);
 }
 
-/* Base Button Styles */
-.btn {
+/* =========================================
+   BUTTON CONTAINER
+   ========================================= */
+
+.button-container {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+/* =========================================
+   BASE BUTTON STYLES
+   ========================================= */
+
+.button {
     /* Layout */
     display: inline-flex;
     align-items: center;
@@ -127,76 +140,50 @@ button {
     box-sizing: border-box;
     min-height: 48px;
 
-    /* Remove default button styles */
+    /* Remove default styles */
     background: none;
     outline: none;
 }
 
-/* Button Text */
-.btn__text {
-    flex-shrink: 0;
-}
-
-/* Button Icon Container */
-.btn__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: var(--border-radius-icon);
-    flex-shrink: 0;
-}
-
-/* Button Icon */
-.btn__icon svg,
-.btn__icon img {
-    width: 22px;
-    height: 22px;
-    display: block;
-}
-
 /* =========================================
-   PRIMARY BUTTON VARIATIONS
+   PRIMARY BUTTON (DEFAULT)
    ========================================= */
 
-/* Primary Default */
-.btn--primary {
+.button.primary {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-text-inverse);
 }
 
-.btn--primary:hover {
+.button.primary:hover {
     background-color: var(--color-primary-hover);
     border-color: var(--color-primary-hover);
     transform: translateY(-1px);
     box-shadow: var(--shadow-hover);
 }
 
-.btn--primary:active {
+.button.primary:active {
     background-color: var(--color-primary-active);
     border-color: var(--color-primary-active);
     transform: translateY(0);
     box-shadow: var(--shadow-active);
 }
 
-.btn--primary:focus {
+.button.primary:focus {
     box-shadow: var(--shadow-focus);
 }
 
 /* =========================================
-   SECONDARY BUTTON VARIATIONS
+   SECONDARY BUTTON
    ========================================= */
 
-/* Secondary Default (Outline) */
-.btn--secondary {
+.button.secondary {
     background-color: transparent;
     border-color: var(--color-primary);
     color: var(--color-text-primary);
 }
 
-.btn--secondary:hover {
+.button.secondary:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-text-inverse);
@@ -204,7 +191,7 @@ button {
     box-shadow: var(--shadow-hover);
 }
 
-.btn--secondary:active {
+.button.secondary:active {
     background-color: var(--color-primary-active);
     border-color: var(--color-primary-active);
     color: var(--color-text-inverse);
@@ -212,61 +199,78 @@ button {
     box-shadow: var(--shadow-active);
 }
 
-.btn--secondary:focus {
+.button.secondary:focus {
     box-shadow: var(--shadow-focus);
 }
 
 /* =========================================
-   TERTIARY BUTTON VARIATIONS
+   BUTTON WRAPPER STYLING
+   ========================================= */
+
+/* Handle buttons wrapped in <strong> (bold styling) */
+strong .button.primary {
+    font-weight: var(--font-weight-semibold); /* Maintain consistent weight */
+}
+
+/* Handle buttons wrapped in <em> (italic styling) */
+em .button.secondary {
+    font-style: normal; /* Override italic for buttons */
+}
+
+/* Handle buttons wrapped in both <strong> and <em> */
+strong em .button,
+em strong .button {
+    font-style: normal;
+    font-weight: var(--font-weight-semibold);
+}
+
+/* =========================================
+   ADDITIONAL BUTTON VARIATIONS
    ========================================= */
 
 /* Tertiary/Ghost Button */
-.btn--tertiary {
+.button.tertiary {
     background-color: transparent;
     border-color: transparent;
     color: var(--color-text-primary);
 }
 
-.btn--tertiary:hover {
+.button.tertiary:hover {
     background-color: rgba(0, 54, 75, 0.1);
     color: var(--color-primary-hover);
 }
 
-.btn--tertiary:active {
+.button.tertiary:active {
     background-color: rgba(0, 54, 75, 0.2);
     color: var(--color-primary-active);
 }
 
-.btn--tertiary:focus {
+.button.tertiary:focus {
     box-shadow: var(--shadow-focus);
 }
 
-/* =========================================
-   ACCENT BUTTON VARIATIONS
-   ========================================= */
-
 /* Accent Button (Yellow/Secondary Color) */
-.btn--accent {
+.button.accent {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
     color: var(--color-text-primary);
 }
 
-.btn--accent:hover {
+.button.accent:hover {
     background-color: var(--color-secondary-hover);
     border-color: var(--color-secondary-hover);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(248, 255, 132, 0.3);
 }
 
-.btn--accent:active {
+.button.accent:active {
     background-color: var(--color-secondary-active);
     border-color: var(--color-secondary-active);
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(248, 255, 132, 0.3);
 }
 
-.btn--accent:focus {
+.button.accent:focus {
     box-shadow: 0 0 0 3px rgba(248, 255, 132, 0.4);
 }
 
@@ -275,39 +279,17 @@ button {
    ========================================= */
 
 /* Small Button */
-.btn--sm {
+.button.small {
     padding: var(--space-sm) var(--space-md);
     font-size: 14px;
     min-height: 36px;
 }
 
-.btn--sm .btn__icon {
-    width: 24px;
-    height: 24px;
-}
-
-.btn--sm .btn__icon svg,
-.btn--sm .btn__icon img {
-    width: 18px;
-    height: 18px;
-}
-
 /* Large Button */
-.btn--lg {
+.button.large {
     padding: var(--space-md) 32px;
     font-size: 18px;
     min-height: 56px;
-}
-
-.btn--lg .btn__icon {
-    width: 32px;
-    height: 32px;
-}
-
-.btn--lg .btn__icon svg,
-.btn--lg .btn__icon img {
-    width: 26px;
-    height: 26px;
 }
 
 /* =========================================
@@ -315,8 +297,8 @@ button {
    ========================================= */
 
 /* Disabled State */
-.btn:disabled,
-.btn--disabled {
+.button:disabled,
+.button.disabled {
     background-color: var(--color-disabled-bg) !important;
     border-color: var(--color-disabled-border) !important;
     color: var(--color-disabled-text) !important;
@@ -327,12 +309,12 @@ button {
 }
 
 /* Loading State */
-.btn--loading {
+.button.loading {
     position: relative;
     color: transparent !important;
 }
 
-.btn--loading::after {
+.button.loading::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -343,28 +325,57 @@ button {
     border: 2px solid transparent;
     border-top: 2px solid currentColor;
     border-radius: 50%;
-    animation: btn-spin 1s linear infinite;
+    animation: button-spin 1s linear infinite;
 }
 
-.btn--primary.btn--loading::after {
+.button.primary.loading::after {
     border-top-color: var(--color-white);
 }
 
-.btn--secondary.btn--loading::after {
+.button.secondary.loading::after {
     border-top-color: var(--color-primary);
 }
 
-.btn--tertiary.btn--loading::after {
+.button.tertiary.loading::after {
     border-top-color: var(--color-primary);
 }
 
-.btn--accent.btn--loading::after {
+.button.accent.loading::after {
     border-top-color: var(--color-primary);
 }
 
-@keyframes btn-spin {
+@keyframes button-spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* =========================================
+   BUTTON ICONS
+   ========================================= */
+
+/* Icon styling for buttons with icons */
+.button .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--border-radius-icon);
+    flex-shrink: 0;
+}
+
+.button .icon svg,
+.button .icon img {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* Icon-only buttons */
+.button.icon-only {
+    padding: var(--space-md);
+    min-width: 48px;
+    gap: 0;
 }
 
 /* =========================================
@@ -372,60 +383,35 @@ button {
    ========================================= */
 
 /* Full Width Button */
-.btn--full {
+.button.full-width {
     width: 100%;
-}
-
-/* Icon Only Button */
-.btn--icon-only {
-    padding: var(--space-md);
-    min-width: 48px;
-    gap: 0;
-}
-
-.btn--icon-only .btn__text {
-    display: none;
-}
-
-/* No Icon Button */
-.btn--no-icon .btn__icon {
-    display: none;
+    display: flex;
 }
 
 /* Rounded Button */
-.btn--rounded {
+.button.rounded {
     border-radius: 24px;
 }
 
 /* =========================================
-   BUTTON GROUPS
+   LINK STYLING (NON-BUTTON LINKS)
    ========================================= */
 
-.btn-group {
-    display: inline-flex;
-    gap: var(--space-sm);
+/* Regular links that are not buttons */
+a:not(.button) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: var(--transition-base);
 }
 
-.btn-group--attached {
-    gap: 0;
+a:not(.button):hover {
+    color: var(--color-primary-hover);
+    text-decoration: none;
 }
 
-.btn-group--attached .btn {
-    border-radius: 0;
-}
-
-.btn-group--attached .btn:first-child {
-    border-top-left-radius: var(--border-radius-xs);
-    border-bottom-left-radius: var(--border-radius-xs);
-}
-
-.btn-group--attached .btn:last-child {
-    border-top-right-radius: var(--border-radius-xs);
-    border-bottom-right-radius: var(--border-radius-xs);
-}
-
-.btn-group--attached .btn:not(:last-child) {
-    border-right-width: 1px;
+a:not(.button):focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* =========================================
@@ -433,85 +419,95 @@ button {
    ========================================= */
 
 @media (max-width: 768px) {
-    .btn {
+    .button {
         padding: 10px 20px;
         font-size: 14px;
         min-height: 44px;
     }
 
-    .btn__icon {
+    .button .icon {
         width: 24px;
         height: 24px;
     }
 
-    .btn__icon svg,
-    .btn__icon img {
+    .button .icon svg,
+    .button .icon img {
         width: 18px;
         height: 18px;
     }
 
-    .btn--sm {
+    .button.small {
         padding: var(--space-sm) 12px;
         font-size: 12px;
         min-height: 32px;
     }
 
-    .btn--lg {
+    .button.large {
         padding: 12px 28px;
         font-size: 16px;
         min-height: 52px;
     }
 
-    /* Stack button groups on mobile */
-    .btn-group--mobile-stack {
-        flex-direction: column;
+    /* Make buttons full width on mobile if needed */
+    .button-container.mobile-full .button {
         width: 100%;
-    }
-
-    .btn-group--mobile-stack .btn {
-        width: 100%;
+        display: flex;
     }
 }
 
 /* =========================================
-   UTILITY CLASSES
+   CONTENT WRAPPER STYLES
    ========================================= */
 
-/* Hide text for screen readers but keep for accessibility */
-.btn__text--sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+.default-content-wrapper h1 {
+    font-family: var(--font-family);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-lg);
 }
+
+.default-content-wrapper p {
+    font-family: var(--font-family);
+    line-height: var(--line-height-base);
+    margin-bottom: var(--space-md);
+}
+
+/* Button containers in content */
+.default-content-wrapper .button-container {
+    margin-bottom: var(--space-md);
+}
+
+/* =========================================
+   ACCESSIBILITY & CONTRAST
+   ========================================= */
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .btn {
+    .button {
         border-width: 3px;
     }
 }
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-    .btn {
+    .button {
         transition: none;
     }
 
-    .btn:hover {
+    .button:hover {
         transform: none;
     }
 
-    .btn:active {
+    .button:active {
         transform: none;
     }
 
-    .btn--loading::after {
+    .button.loading::after {
         animation: none;
     }
+}
+
+/* Focus visible for better keyboard navigation */
+.button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
