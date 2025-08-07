@@ -1,70 +1,5 @@
-/* Default Styles */
-
-/* links */
-a:any-link {
-    color: var(--link-color);
-    text-decoration: none;
-    overflow-wrap: break-word;
-}
-
-a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
-}
-
-/* buttons */
-a.button:any-link,
-button {
-    box-sizing: border-box;
-    display: inline-block;
-    max-width: 100%;
-    margin: 12px 0;
-    border: 2px solid transparent;
-    border-radius: 2.4em;
-    padding: 0.5em 1.2em;
-    font-family: var(--body-font-family);
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.25;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--link-color);
-    color: var(--background-color);
-    cursor: pointer;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-a.button:hover,
-a.button:focus,
-button:hover,
-button:focus {
-    background-color: var(--link-hover-color);
-    cursor: pointer;
-}
-
-button:disabled,
-button:disabled:hover {
-    background-color: var(--light-color);
-    cursor: unset;
-}
-
-a.button.secondary,
-button.secondary {
-    background-color: unset;
-    border: 2px solid currentcolor;
-    color: var(--text-color);
-}
-
-button {
-    font: inherit;
-}
-
-/* End Default Styles */
-
 /* =========================================
-   BUTTON COMPONENT SYSTEM - AEM Edge Delivery
+   BUTTON COMPONENT - AEM BOILERPLATE
    ========================================= */
 
 /* =========================================
@@ -72,9 +7,9 @@ button {
    ========================================= */
 
 .button-container {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 
 /* =========================================
@@ -82,92 +17,150 @@ button {
    ========================================= */
 
 .button {
-    /* Layout */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 24px;
-
-    /* Typography */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    text-decoration: none;
-    white-space: nowrap;
-
-    /* Appearance */
-    border: 2px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    /* Sizing */
-    box-sizing: border-box;
-    min-height: 48px;
-
-    /* Remove default styles */
-    background: none;
-    outline: none;
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  
+  /* Typography */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Appearance */
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* Sizing */
+  box-sizing: border-box;
+  min-height: 48px;
 }
 
 /* =========================================
-   PRIMARY BUTTON (DEFAULT)
+   PRIMARY BUTTON (DEFAULT - DARK TEAL)
    ========================================= */
 
-.button.primary {
-    background-color: #00364b;
-    border-color: #00364b;
-    color: #ffffff;
+.button.primary,
+.button {
+  background-color: #00364b;
+  border-color: #00364b;
+  color: #ffffff;
 }
 
-.button.primary:hover {
-    background-color: #004a63;
-    border-color: #004a63;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
+.button.primary:hover,
+.button:hover {
+  background-color: #004a63;
+  border-color: #004a63;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
 }
 
-.button.primary:active {
-    background-color: #002a3a;
-    border-color: #002a3a;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
+.button.primary:active,
+.button:active {
+  background-color: #002a3a;
+  border-color: #002a3a;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
 }
 
-.button.primary:focus {
-    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+.button.primary:focus,
+.button:focus {
+  box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+  outline: none;
 }
 
 /* =========================================
-   SECONDARY BUTTON
+   SECONDARY BUTTON (YELLOW ACCENT)
    ========================================= */
 
 .button.secondary {
-    background-color: transparent;
-    border-color: #00364b;
-    color: #00364b;
+  background-color: #f8ff84;
+  border-color: #00364b;
+  color: #00364b;
 }
 
 .button.secondary:hover {
-    background-color: #00364b;
-    border-color: #00364b;
-    color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
+  background-color: #f5fc77;
+  border-color: #004a63;
+  color: #004a63;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(248, 255, 132, 0.3);
 }
 
 .button.secondary:active {
-    background-color: #002a3a;
-    border-color: #002a3a;
-    color: #ffffff;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
+  background-color: #f2f96a;
+  border-color: #002a3a;
+  color: #002a3a;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(248, 255, 132, 0.3);
 }
 
 .button.secondary:focus {
-    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+  box-shadow: 0 0 0 3px rgba(248, 255, 132, 0.4);
+  outline: none;
+}
+
+/* =========================================
+   TERTIARY BUTTON (OUTLINE)
+   ========================================= */
+
+.button.tertiary {
+  background-color: transparent;
+  border-color: #00364b;
+  color: #00364b;
+}
+
+.button.tertiary:hover {
+  background-color: #00364b;
+  border-color: #00364b;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
+}
+
+.button.tertiary:active {
+  background-color: #002a3a;
+  border-color: #002a3a;
+  color: #ffffff;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
+}
+
+.button.tertiary:focus {
+  box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+  outline: none;
+}
+
+/* =========================================
+   GHOST BUTTON (NO BORDER)
+   ========================================= */
+
+.button.ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: #00364b;
+}
+
+.button.ghost:hover {
+  background-color: rgba(0, 54, 75, 0.1);
+  color: #004a63;
+}
+
+.button.ghost:active {
+  background-color: rgba(0, 54, 75, 0.2);
+  color: #002a3a;
+}
+
+.button.ghost:focus {
+  box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+  outline: none;
 }
 
 /* =========================================
@@ -175,70 +168,20 @@ button {
    ========================================= */
 
 /* Handle buttons wrapped in <strong> (bold styling) */
-strong .button.primary {
-    font-weight: 600; /* Maintain consistent weight */
+strong .button {
+  font-weight: 600; /* Maintain consistent weight */
 }
 
 /* Handle buttons wrapped in <em> (italic styling) */
-em .button.secondary {
-    font-style: normal; /* Override italic for buttons */
+em .button {
+  font-style: normal; /* Override italic for buttons */
 }
 
 /* Handle buttons wrapped in both <strong> and <em> */
 strong em .button,
 em strong .button {
-    font-style: normal;
-    font-weight: 600;
-}
-
-/* =========================================
-   ADDITIONAL BUTTON VARIATIONS
-   ========================================= */
-
-/* Tertiary/Ghost Button */
-.button.tertiary {
-    background-color: transparent;
-    border-color: transparent;
-    color: #00364b;
-}
-
-.button.tertiary:hover {
-    background-color: rgba(0, 54, 75, 0.1);
-    color: #004a63;
-}
-
-.button.tertiary:active {
-    background-color: rgba(0, 54, 75, 0.2);
-    color: #002a3a;
-}
-
-.button.tertiary:focus {
-    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
-}
-
-/* Accent Button (Yellow/Secondary Color) */
-.button.accent {
-    background-color: #f8ff84;
-    border-color: #f8ff84;
-    color: #00364b;
-}
-
-.button.accent:hover {
-    background-color: #f5fc77;
-    border-color: #f5fc77;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(248, 255, 132, 0.3);
-}
-
-.button.accent:active {
-    background-color: #f2f96a;
-    border-color: #f2f96a;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(248, 255, 132, 0.3);
-}
-
-.button.accent:focus {
-    box-shadow: 0 0 0 3px rgba(248, 255, 132, 0.4);
+  font-style: normal;
+  font-weight: 600;
 }
 
 /* =========================================
@@ -247,16 +190,87 @@ em strong .button {
 
 /* Small Button */
 .button.small {
-    padding: 8px 12px;
-    font-size: 14px;
-    min-height: 36px;
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: 36px;
 }
 
 /* Large Button */
 .button.large {
-    padding: 12px 32px;
-    font-size: 18px;
-    min-height: 56px;
+  padding: 16px 32px;
+  font-size: 18px;
+  min-height: 56px;
+}
+
+/* Extra Large Button */
+.button.xl {
+  padding: 20px 40px;
+  font-size: 20px;
+  min-height: 64px;
+}
+
+/* =========================================
+   BUTTON ICONS
+   ========================================= */
+
+/* Icon container */
+.button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 12.5px;
+  flex-shrink: 0;
+}
+
+.button .icon svg,
+.button .icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Icon-only buttons */
+.button.icon-only {
+  padding: 12px;
+  min-width: 48px;
+  gap: 0;
+  justify-content: center;
+}
+
+/* Adjust icon sizes for different button sizes */
+.button.small .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.button.small .icon svg,
+.button.small .icon img {
+  width: 18px;
+  height: 18px;
+}
+
+.button.large .icon {
+  width: 32px;
+  height: 32px;
+}
+
+.button.large .icon svg,
+.button.large .icon img {
+  width: 26px;
+  height: 26px;
+}
+
+.button.xl .icon {
+  width: 36px;
+  height: 36px;
+}
+
+.button.xl .icon svg,
+.button.xl .icon img {
+  width: 30px;
+  height: 30px;
 }
 
 /* =========================================
@@ -264,85 +278,68 @@ em strong .button {
    ========================================= */
 
 /* Disabled State */
+.button.disabled,
 .button:disabled,
-.button.disabled {
-    background-color: #cccccc !important;
-    border-color: #cccccc !important;
-    color: #666666 !important;
-    cursor: not-allowed !important;
-    transform: none !important;
-    box-shadow: none !important;
-    opacity: 0.6;
+.button[aria-disabled="true"] {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #999999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+.button.disabled:hover,
+.button:disabled:hover,
+.button[aria-disabled="true"]:hover {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #999999;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Loading State */
 .button.loading {
-    position: relative;
-    color: transparent !important;
+  position: relative;
+  color: transparent;
 }
 
 .button.loading::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    margin: -8px 0 0 -8px;
-    border: 2px solid transparent;
-    border-top: 2px solid currentColor;
-    border-radius: 50%;
-    animation: button-spin 1s linear infinite;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: button-spin 1s linear infinite;
 }
 
-.button.primary.loading::after {
-    border-top-color: #ffffff;
+.button.primary.loading::after,
+.button.loading::after {
+  border-top-color: #ffffff;
 }
 
 .button.secondary.loading::after {
-    border-top-color: #00364b;
+  border-top-color: #00364b;
 }
 
 .button.tertiary.loading::after {
-    border-top-color: #00364b;
+  border-top-color: #00364b;
 }
 
-.button.accent.loading::after {
-    border-top-color: #00364b;
+.button.ghost.loading::after {
+  border-top-color: #00364b;
 }
 
 @keyframes button-spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* =========================================
-   BUTTON ICONS
-   ========================================= */
-
-/* Icon styling for buttons with icons */
-.button .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 12.5px;
-    flex-shrink: 0;
-}
-
-.button .icon svg,
-.button .icon img {
-    width: 22px;
-    height: 22px;
-    display: block;
-}
-
-/* Icon-only buttons */
-.button.icon-only {
-    padding: 12px;
-    min-width: 48px;
-    gap: 0;
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* =========================================
@@ -351,13 +348,44 @@ em strong .button {
 
 /* Full Width Button */
 .button.full-width {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 /* Rounded Button */
 .button.rounded {
-    border-radius: 24px;
+  border-radius: 24px;
+}
+
+/* Pill Button */
+.button.pill {
+  border-radius: 50px;
+}
+
+/* Square Button */
+.button.square {
+  border-radius: 0;
+}
+
+/* =========================================
+   CONTENT WRAPPER STYLES
+   ========================================= */
+
+.default-content-wrapper h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #00364b;
+  margin-bottom: 24px;
+}
+
+.default-content-wrapper p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Button containers in content */
+.default-content-wrapper .button-container {
+  margin-bottom: 12px;
 }
 
 /* =========================================
@@ -366,19 +394,19 @@ em strong .button {
 
 /* Regular links that are not buttons */
 a:not(.button) {
-    color: #00364b;
-    text-decoration: underline;
-    transition: all 0.2s ease;
+  color: #00364b;
+  text-decoration: underline;
+  transition: all 0.2s ease;
 }
 
 a:not(.button):hover {
-    color: #004a63;
-    text-decoration: none;
+  color: #004a63;
+  text-decoration: none;
 }
 
 a:not(.button):focus {
-    outline: 2px solid #00364b;
-    outline-offset: 2px;
+  outline: 2px solid #00364b;
+  outline-offset: 2px;
 }
 
 /* =========================================
@@ -386,95 +414,98 @@ a:not(.button):focus {
    ========================================= */
 
 @media (max-width: 768px) {
-    .button {
-        padding: 10px 20px;
-        font-size: 14px;
-        min-height: 44px;
-    }
-
-    .button .icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .button .icon svg,
-    .button .icon img {
-        width: 18px;
-        height: 18px;
-    }
-
-    .button.small {
-        padding: 8px 12px;
-        font-size: 12px;
-        min-height: 32px;
-    }
-
-    .button.large {
-        padding: 12px 28px;
-        font-size: 16px;
-        min-height: 52px;
-    }
-
-    /* Make buttons full width on mobile if needed */
-    .button-container.mobile-full .button {
-        width: 100%;
-        display: flex;
-    }
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  
+  .button .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button .icon svg,
+  .button .icon img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .button.small {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+  
+  .button.large {
+    padding: 12px 24px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+  
+  .button.xl {
+    padding: 14px 28px;
+    font-size: 18px;
+    min-height: 52px;
+  }
+  
+  /* Make buttons full width on mobile if needed */
+  .button-container.mobile-full .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* =========================================
-   CONTENT WRAPPER STYLES
+   ACCESSIBILITY
    ========================================= */
 
-.default-content-wrapper h1 {
-    font-family: 'Poppins', sans-serif;
-    color: #00364b;
-    margin-bottom: 24px;
+/* Focus visible for better keyboard navigation */
+.button:focus-visible {
+  outline: 2px solid #00364b;
+  outline-offset: 2px;
 }
-
-.default-content-wrapper p {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
-    margin-bottom: 12px;
-}
-
-/* Button containers in content */
-.default-content-wrapper .button-container {
-    margin-bottom: 12px;
-}
-
-/* =========================================
-   ACCESSIBILITY & CONTRAST
-   ========================================= */
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .button {
-        border-width: 3px;
-    }
+  .button {
+    border-width: 3px;
+  }
 }
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-    .button {
-        transition: none;
-    }
-
-    .button:hover {
-        transform: none;
-    }
-
-    .button:active {
-        transform: none;
-    }
-
-    .button.loading::after {
-        animation: none;
-    }
+  .button {
+    transition: none;
+  }
+  
+  .button:hover {
+    transform: none;
+  }
+  
+  .button:active {
+    transform: none;
+  }
+  
+  .button.loading::after {
+    animation: none;
+  }
 }
 
-/* Focus visible for better keyboard navigation */
-.button:focus-visible {
-    outline: 2px solid #00364b;
-    outline-offset: 2px;
+/* =========================================
+   UTILITY CLASSES
+   ========================================= */
+
+/* Hide text for screen readers but keep for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
