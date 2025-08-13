@@ -200,7 +200,7 @@ main .section.highlight {
 }
 
 /* =========================================
-   BUTTON COMPONENT - AEM BOILERPLATE
+   BUTTON COMPONENT - FIGMA DESIGN SYSTEM
    ========================================= */
 
 /* =========================================
@@ -226,7 +226,7 @@ main .section.highlight {
     padding: 12px 24px;
 
     /* Typography */
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -245,14 +245,154 @@ main .section.highlight {
 }
 
 /* =========================================
-   PRIMARY BUTTON (DEFAULT - DARK TEAL)
+   PRIMARY BUTTON (DARK TEAL)
    ========================================= */
 
 .button.primary,
 .button {
     background-color: #00364b;
     border-color: #00364b;
-    color: #fff;
+    color: #ffffff;
+}
+
+.button.primary:hover,
+.button:hover {
+    background-color: #004a63;
+    border-color: #004a63;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
+}
+
+.button.primary:active,
+.button:active {
+    background-color: #002a3a;
+    border-color: #002a3a;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
+}
+
+.button.primary:focus,
+.button:focus {
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+    outline: none;
+}
+
+/* =========================================
+   SECONDARY BUTTON (LIGHT WITH BORDER)
+   ========================================= */
+
+.button.secondary {
+    background-color: #f0f6fa;
+    border-color: #00364b;
+    color: #00364b;
+}
+
+.button.secondary:hover {
+    background-color: #e1ecf3;
+    border-color: #004a63;
+    color: #004a63;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.15);
+}
+
+.button.secondary:active {
+    background-color: #d2e3ec;
+    border-color: #002a3a;
+    color: #002a3a;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.15);
+}
+
+.button.secondary:focus {
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+    outline: none;
+}
+
+/* =========================================
+   TERTIARY BUTTON (OUTLINE ONLY)
+   ========================================= */
+
+.button.tertiary {
+    background-color: transparent;
+    border-color: #00364b;
+    color: #00364b;
+}
+
+.button.tertiary:hover {
+    background-color: #00364b;
+    border-color: #00364b;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 54, 75, 0.2);
+}
+
+.button.tertiary:active {
+    background-color: #002a3a;
+    border-color: #002a3a;
+    color: #ffffff;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 54, 75, 0.2);
+}
+
+.button.tertiary:focus {
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+    outline: none;
+}
+
+/* =========================================
+   GHOST BUTTON (NO BORDER)
+   ========================================= */
+
+.button.ghost {
+    background-color: transparent;
+    border-color: transparent;
+    color: #00364b;
+}
+
+.button.ghost:hover {
+    background-color: rgba(0, 54, 75, 0.08);
+    color: #004a63;
+}
+
+.button.ghost:active {
+    background-color: rgba(0, 54, 75, 0.15);
+    color: #002a3a;
+}
+
+.button.ghost:focus {
+    box-shadow: 0 0 0 3px rgba(0, 54, 75, 0.3);
+    outline: none;
+}
+
+/* =========================================
+   ACCENT BUTTON (YELLOW)
+   ========================================= */
+
+.button.accent {
+    background-color: #f8ff84;
+    border-color: #f8ff84;
+    color: #00364b;
+}
+
+.button.accent:hover {
+    background-color: #f5fc77;
+    border-color: #f5fc77;
+    color: #004a63;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(248, 255, 132, 0.3);
+}
+
+.button.accent:active {
+    background-color: #f2f96a;
+    border-color: #f2f96a;
+    color: #002a3a;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(248, 255, 132, 0.3);
+}
+
+.button.accent:focus {
+    box-shadow: 0 0 0 3px rgba(248, 255, 132, 0.4);
+    outline: none;
 }
 
 /* =========================================
@@ -274,129 +414,6 @@ strong em .button,
 em strong .button {
     font-style: normal;
     font-weight: 600;
-}
-
-/* =========================================
-   ACCESSIBILITY
-   ========================================= */
-
-/* Focus visible for better keyboard navigation */
-.button:focus-visible {
-    outline: 2px solid #00364b;
-    outline-offset: 2px;
-}
-
-/* =========================================
-   PRIMARY BUTTON (DEFAULT - DARK TEAL)
-   ========================================= */
-
-.button.primary:hover,
-.button:hover {
-    background-color: #004a63;
-    border-color: #004a63;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgb(0 54 75 / 20%);
-}
-
-.button.primary:active,
-.button:active {
-    background-color: #002a3a;
-    border-color: #002a3a;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgb(0 54 75 / 20%);
-}
-
-.button.primary:focus,
-.button:focus {
-    box-shadow: 0 0 0 3px rgb(0 54 75 / 30%);
-    outline: none;
-}
-
-/* =========================================
-   SECONDARY BUTTON (YELLOW ACCENT)
-   ========================================= */
-
-.button.secondary {
-    background-color: #f8ff84;
-    border-color: #00364b;
-    color: #00364b;
-}
-
-.button.secondary:hover {
-    background-color: #f5fc77;
-    border-color: #004a63;
-    color: #004a63;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgb(248 255 132 / 30%);
-}
-
-.button.secondary:active {
-    background-color: #f2f96a;
-    border-color: #002a3a;
-    color: #002a3a;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgb(248 255 132 / 30%);
-}
-
-.button.secondary:focus {
-    box-shadow: 0 0 0 3px rgb(248 255 132 / 40%);
-    outline: none;
-}
-
-/* =========================================
-   TERTIARY BUTTON (OUTLINE)
-   ========================================= */
-
-.button.tertiary {
-    background-color: transparent;
-    border-color: #00364b;
-    color: #00364b;
-}
-
-.button.tertiary:hover {
-    background-color: #00364b;
-    border-color: #00364b;
-    color: #fff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgb(0 54 75 / 20%);
-}
-
-.button.tertiary:active {
-    background-color: #002a3a;
-    border-color: #002a3a;
-    color: #fff;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgb(0 54 75 / 20%);
-}
-
-.button.tertiary:focus {
-    box-shadow: 0 0 0 3px rgb(0 54 75 / 30%);
-    outline: none;
-}
-
-/* =========================================
-   GHOST BUTTON (NO BORDER)
-   ========================================= */
-
-.button.ghost {
-    background-color: transparent;
-    border-color: transparent;
-    color: #00364b;
-}
-
-.button.ghost:hover {
-    background-color: rgb(0 54 75 / 10%);
-    color: #004a63;
-}
-
-.button.ghost:active {
-    background-color: rgb(0 54 75 / 20%);
-    color: #002a3a;
-}
-
-.button.ghost:focus {
-    box-shadow: 0 0 0 3px rgb(0 54 75 / 30%);
-    outline: none;
 }
 
 /* =========================================
@@ -444,6 +461,15 @@ em strong .button {
     width: 22px;
     height: 22px;
     display: block;
+}
+
+/* Icon positioning */
+.button.icon-left {
+    flex-direction: row;
+}
+
+.button.icon-right {
+    flex-direction: row-reverse;
 }
 
 /* Icon-only buttons */
@@ -498,7 +524,7 @@ em strong .button {
 .button[aria-disabled="true"] {
     background-color: #e5e5e5;
     border-color: #e5e5e5;
-    color: #999;
+    color: #999999;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
@@ -510,7 +536,7 @@ em strong .button {
 .button[aria-disabled="true"]:hover {
     background-color: #e5e5e5;
     border-color: #e5e5e5;
-    color: #999;
+    color: #999999;
     transform: none;
     box-shadow: none;
 }
@@ -530,14 +556,14 @@ em strong .button {
     height: 16px;
     margin: -8px 0 0 -8px;
     border: 2px solid transparent;
-    border-top: 2px solid currentcolor;
+    border-top: 2px solid currentColor;
     border-radius: 50%;
     animation: button-spin 1s linear infinite;
 }
 
 .button.primary.loading::after,
 .button.loading::after {
-    border-top-color: #fff;
+    border-top-color: #ffffff;
 }
 
 .button.secondary.loading::after {
@@ -549,6 +575,10 @@ em strong .button {
 }
 
 .button.ghost.loading::after {
+    border-top-color: #00364b;
+}
+
+.button.accent.loading::after {
     border-top-color: #00364b;
 }
 
@@ -587,13 +617,13 @@ em strong .button {
    ========================================= */
 
 .default-content-wrapper h1 {
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #00364b;
     margin-bottom: 24px;
 }
 
 .default-content-wrapper p {
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     margin-bottom: 12px;
 }
@@ -625,10 +655,53 @@ a:not(.button):focus {
 }
 
 /* =========================================
+   BUTTON GROUPS
+   ========================================= */
+
+.button-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.button-group.vertical {
+    flex-direction: column;
+}
+
+.button-group.center {
+    justify-content: center;
+}
+
+.button-group.right {
+    justify-content: flex-end;
+}
+
+/* Attached button group */
+.button-group.attached {
+    gap: 0;
+}
+
+.button-group.attached .button-container .button {
+    border-radius: 0;
+    border-right-width: 1px;
+}
+
+.button-group.attached .button-container:first-child .button {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.button-group.attached .button-container:last-child .button {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right-width: 2px;
+}
+
+/* =========================================
    RESPONSIVE DESIGN
    ========================================= */
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
     .button {
         padding: 10px 20px;
         font-size: 14px;
@@ -670,14 +743,35 @@ a:not(.button):focus {
         display: flex;
         justify-content: center;
     }
+
+    /* Stack button groups on mobile */
+    .button-group.mobile-stack {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button-group.mobile-stack .button-container {
+        width: 100%;
+    }
+
+    .button-group.mobile-stack .button-container .button {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* =========================================
    ACCESSIBILITY
    ========================================= */
 
+/* Focus visible for better keyboard navigation */
+.button:focus-visible {
+    outline: 2px solid #00364b;
+    outline-offset: 2px;
+}
+
 /* High contrast mode support */
-@media (prefers-contrast: more) {
+@media (prefers-contrast: high) {
     .button {
         border-width: 3px;
     }
