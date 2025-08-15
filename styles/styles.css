@@ -278,17 +278,17 @@ main .section.highlight {
 }
 
 /* =========================================
-   SECONDARY BUTTON (YELLOW - FIGMA DESIGN)
+   SECONDARY BUTTON (WHITE - FIGMA DESIGN)
    ========================================= */
 
 .button.secondary {
-    background-color: #f8ff84;
+    background-color: #ffffff;
     border-color: #00364b;
     color: #00364b;
 }
 
 .button.secondary:hover {
-    background-color: #f5fc6e;
+    background-color: #f8f9fa;
     border-color: #00364b;
     color: #00364b;
     transform: translateY(-1px);
@@ -296,7 +296,7 @@ main .section.highlight {
 }
 
 .button.secondary:active {
-    background-color: #f2f96a;
+    background-color: #e9ecef;
     border-color: #00364b;
     color: #00364b;
     transform: translateY(0);
@@ -572,7 +572,10 @@ em strong .button {
     border-top-color: #ffffff;
 }
 
-.button.secondary.loading::after,
+.button.secondary.loading::after {
+    border-top-color: #00364b;
+}
+
 .button.accent.loading::after {
     border-top-color: #00364b;
 }
